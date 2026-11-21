@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Двойной Сыр — Шаурма</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: linear-gradient(135deg, #f77f00 0%, #d62828 100%); 
+            margin: 0; 
+            padding: 20px; 
+            color: #333;
+        }
+        header {
+            text-align: center; 
+            color: white; 
+            padding: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        .card { 
+            background: white; 
+            border-radius: 15px; 
+            padding: 20px; 
+            margin: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            text-align: center; 
+            width: 250px;
+            flex-basis: auto;
+        }
+        .emoji { 
+            font-size: 5em; 
+            display: block; 
+            margin: 10px 0; 
+        }
+        h3 {
+            margin: 10px 0;
+            color: #d62828;
+        }
+        strong {
+            color: #f77f00;
+            font-size: 1.2em;
+        }
+        #petBtn { 
+            position: fixed; 
+            bottom: 20px; 
+            right: 20px; 
+            padding: 15px 30px; 
+            font-size: 1.2em; 
+            border: none; 
+            border-radius: 50px; 
+            background: #ff4757; 
+            color: white; 
+            cursor: pointer; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🔥 Двойной Сыр — Шаурма с лишним сыром 🔥</h1>
+    </header>
+    <main style="display:flex; flex-wrap:wrap; justify-content:center; max-width:1200px; margin:0 auto;">
+        <!-- КАРТОЧКА 1 -->
+        <div class="card">
+            <span class="emoji">🌯</span>
+            <h3>Классика с двойным сыром</h3>
+            <p>Нежное куриное мясо, свежий салат, сочные помидоры и щедрый слой двух видов сыра.</p>
+            <p><strong>350 ₽</strong></p>
+        </div>
+        <!-- КАРТОЧКА 2 -->
+        <div class="card">
+            <span class="emoji">🥩</span>
+            <h3>Говяжья с чеддером</h3>
+            <p>Сочная говядина, острый соус, хрустящий лук и расплавленный чеддер с моцареллой.</p>
+            <p><strong>450 ₽</strong></p>
+        </div>
+        <!-- КАРТОЧКА 3 -->
+        <div class="card">
+            <span class="emoji">🌶️</span>
+            <h3>Ожог с сыром</h3>
+            <p>Острые перцы, фирменный острый соус, курица и двойной сыр для смелых.</p>
+            <p><strong>400 ₽</strong></p>
+        </div>
+        <!-- КАРТОЧКА 4 -->
+        <div class="card">
+            <span class="emoji">🧀</span>
+            <h3>Сырный бургер-шаурма</h3>
+            <p>Секретный рецепт: мясо, сыр, сыр, еще сыр! Идеально для голодных.</p>
+            <p><strong>500 ₽</strong></p>
+        </div>
+    </main>
+    <button id="petBtn">Погладить 🐉</button>
+    <script>
+        const btn = document.getElementById('petBtn');
+        btn.addEventListener('mouseover', () => {
+            btn.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+            btn.style.top = Math.random() * (window.innerHeight - 50) + 'px';
+        });
+    </script>
+</body>
+</html>
